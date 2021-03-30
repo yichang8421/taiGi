@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    background: #eee;
+}
+
+#html {
+    /*清除横向滚动条（代码自动换行）*/
+    word-break: break-all;
+}
+
+/* PC端居中显示 */
+@media(min-width: 500px){
+    #div1 {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+/* 移动端居中显示 */
+@media (max-width: 500px) {
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
+}
+
+#div1::before {
+    content: '';
+    display: block;
+}
+
+#div1::after {
+    content: '';
+    display: block;
+}
+
+/*@media(max-width: 500px){*/
+/*    #html{*/
+/*        height: 50vh;*/
+/*    }*/
+/*    #div1{*/
+/*        width:200px;*/
+/*        height:200px;*/
+/*        position:relative;*/
+/*        right: 0px;*/
+/*        top: 0px;*/
+/*    }*/
+/*}*/
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
